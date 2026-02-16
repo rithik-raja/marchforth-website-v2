@@ -1,25 +1,19 @@
-import logo from '@/images/clients/phobia/logomark-dark.svg'
-import imageHero from './hero.jpg'
-import imageJennyWilson from './jenny-wilson.jpg'
+import imageLogo from '../../../../public/my-tempie-small.jpg'
+import imageHero from '../../../../public/my-tempie-screenshot.jpg'
 
 export const caseStudy = {
-  client: 'Phobia',
-  title: 'Overcome your fears, find your match',
+  client: 'MyTempie',
+  title: 'Real-time IR temperature sensing for workplace safety',
   description:
-    'Find love in the face of fear — Phobia is a dating app that matches users based on their mutual phobias so they can be scared together.',
+    'MarchForth built MyTempie as a mobile-first health platform that pairs external IR sensors with cloud-backed administration for large-scale workplace screening.',
   summary: [
-    'Find love in the face of fear — Phobia is a dating app that matches users based on their mutual phobias so they can be scared together.',
-    'We worked with Phobia to develop a new onboarding flow. A user is shown pictures of common phobias and we use the microphone to detect which ones make them scream, feeding the results into the matching algorithm.',
+    'MyTempie digitized non-contact temperature checks by connecting mobile workflows with Melexis IR sensors and authenticated user profiles.',
+    'The platform unified data capture, cloud synchronization, and real-time administrative oversight across schools and corporate facilities.',
   ],
-  logo,
+  logo: imageLogo,
   image: { src: imageHero },
-  date: '2022-06',
-  service: 'App development',
-  testimonial: {
-    author: { name: 'Jenny Wilson', role: 'CPO of Phobia' },
-    content:
-      'The team at Studio went above and beyond with our onboarding, even finding a way to access the user’s microphone without triggering one of those annoying permission dialogs.',
-  },
+  date: '2024-08',
+  service: 'IoT integration, Mobile app, AWS cloud platform',
 }
 
 export const metadata = {
@@ -27,37 +21,44 @@ export const metadata = {
   description: caseStudy.description,
 }
 
-## Overview
+## Executive summary
 
-Noticing incredibly high churn, the team at Phobia came to the conclusion that, instead of having a fundamentally flawed business idea, they needed to improve their onboarding process.
+MyTempie is a mobile-first health solution designed to capture user body temperature through an external IR sensor and synchronize that data to AWS for enterprise safety monitoring.
 
-Previously users selected their phobias manually but this led to some users selecting things they weren’t actually afraid of to increase their matches.
+MarchForth delivered the full product stack: sensor integration, cross-platform mobile app, administrative dashboard, APIs, and cloud infrastructure.
 
-To combat this, we developed a system that displays a slideshow of common phobias during onboarding. We then use malware to surreptitiously access their microphone and detect when they have audible reactions. We measure the pitch, volume and duration of their screams and feed that information to the matching algorithm.
+## The challenge
 
-The next phase is a VR version of the onboarding flow where users are subjected to a series of scenarios that will determine their fears. We are currently developing the first scenario, working title: “Jumping out of a plane full of spiders”.
+At project start, organizations needed fast, non-contact temperature screening that could scale without manual bottlenecks.
 
-## What we did
+The program had three key constraints:
+
+1. Hardware integration: mobile devices had to reliably ingest readings from Melexis MLX90614/90632 sensors through Arduino ESP32 over I2C.
+2. Data integrity: each reading needed secure linkage to authenticated user identities for compliance and auditability.
+3. Scalability: the platform needed to support bulk user operations and multiple organizational datasets in parallel.
+
+## The solution
+
+MarchForth implemented a production-ready architecture across hardware, software, and cloud layers.
 
 <TagList>
-  <TagListItem>Android</TagListItem>
-  <TagListItem>iOS</TagListItem>
-  <TagListItem>Malware</TagListItem>
-  <TagListItem>VR</TagListItem>
+  <TagListItem>Flutter mobile app for iOS and Android</TagListItem>
+  <TagListItem>Arduino ESP32 + Melexis IR sensor integration</TagListItem>
+  <TagListItem>Admin dashboard with VueJS and Bootstrap</TagListItem>
+  <TagListItem>REST APIs on PHP and Go, hosted on AWS + MySQL</TagListItem>
 </TagList>
 
-<Blockquote
-  author={{ name: 'Jenny Wilson', role: 'CPO of Phobia' }}
-  image={{ src: imageJennyWilson }}
->
-  The team at Studio went above and beyond with our onboarding, even finding a
-  way to access the user’s microphone without triggering one of those annoying
-  permission dialogs.
-</Blockquote>
+## Workflow
+
+1. Authenticated users open the MyTempie mobile app.
+2. The app captures identity context and triggers the IR sensor for a reading.
+3. If temperature is below the configured threshold, access is approved; otherwise, entry is restricted.
+4. Temperature and user metadata are sent to AWS in real time for centralized review.
+5. Administrators monitor logs and manage bulk user data through the dashboard.
 
 <StatList>
-  <StatListItem value="20%" label="Churn rate" />
-  <StatListItem value="5x" label="Uninstalls" />
-  <StatListItem value="2.3" label="App store rating" />
-  <StatListItem value="8" label="Pending lawsuits" />
+  <StatListItem value="Automated" label="Compliance logging" />
+  <StatListItem value="Real-time" label="Cloud sync to AWS" />
+  <StatListItem value="Multi-org" label="Scalable data model" />
+  <StatListItem value="Low latency" label="API response profile" />
 </StatList>

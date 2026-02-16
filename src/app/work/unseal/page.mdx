@@ -1,25 +1,17 @@
-import logo from '@/images/clients/unseal/logomark-dark.svg'
-import imageHero from './hero.jpg'
-import imageEmilySelman from './emily-selman.jpg'
+import imageLogo from '../../../../public/tekstream-small.jpg'
 
 export const caseStudy = {
-  client: 'Unseal',
-  title: 'Get a hodl of your health',
+  client: 'TekStream',
+  title: 'Modernizing enterprise workloads with AWS and applied AI',
   description:
-    'Unseal is the first NFT platform where users can mint and trade NFTs of their own personal health records, allowing them to take control of their data.',
+    'TekStream engaged MarchForth as a delivery partner to accelerate a high-stakes cloud modernization program for a shared enterprise client.',
   summary: [
-    'Unseal is the first NFT platform where users can mint and trade NFTs of their own personal health records, allowing them to take control of their data.',
-    'We built out the blockchain infrastructure that supports Unseal. Unfortunately, we took a massive loss on this project when Unseal’s cryptocurrency, PlaceboCoin, went to zero.',
+    'TekStream led strategic architecture while MarchForth executed platform engineering for a phased migration from legacy systems to AWS.',
+    'Together we delivered an AI-enabled operations model using AWS-native services, improving release velocity, incident response, and cost visibility.',
   ],
-  logo,
-  image: { src: imageHero },
-  date: '2022-10',
-  service: 'Blockchain development',
-  testimonial: {
-    author: { name: 'Emily Selman', role: 'Head of Engineering at Unseal' },
-    content:
-      'Studio did an amazing job building out our core blockchain infrastructure and I’m sure once PlaceboCoin rallies they’ll be able to finish the project.',
-  },
+  logo: imageLogo,
+  date: '2025-11',
+  service: 'AWS architecture, AI integration, Platform delivery',
 }
 
 export const metadata = {
@@ -29,31 +21,25 @@ export const metadata = {
 
 ## Overview
 
-Annoyed that his wife’s gynaecologist would not disclose the results of her pap smear, Unseal’s founder Kevin came up with the idea of using the block chain to store individual health records.
+TekStream subcontracted MarchForth to support a complex transformation program for a multi-entity healthcare services organization operating on aging on-prem infrastructure.
 
-Unseal approached us early in their development, having just raised funds through an ICO of their cryptocurrency PlaceboCoin. Having never worked on a web3 product we decided to farm the project out to an agency in Kyiv and skim profits off the top. Despite frequent complaints about missile strikes and power outages, the Ukrainians delivered the brief ahead of schedule.
+The engagement required both speed and precision. Legacy .NET and Java workloads had to be migrated with minimal downtime, while leadership needed better forecasting, more reliable operational insights, and a cleaner path to continuous delivery.
 
-After reaching a high of $12k, PlaceboCoin went to zero in a matter of hours. Because we took payment in PlaceboCoin but our subcontractors insisted on being paid in USD we have taken a huge financial loss on this project.
+MarchForth joined TekStream's delivery team and owned key execution tracks end-to-end.
 
 ## What we did
 
 <TagList>
-  <TagListItem>Blockchain development</TagListItem>
-  <TagListItem>Backend (Solidity)</TagListItem>
-  <TagListItem>Smart contracts</TagListItem>
+  <TagListItem>AWS ECS and Lambda migration paths</TagListItem>
+  <TagListItem>Amazon RDS and DynamoDB data tier strategy</TagListItem>
+  <TagListItem>Event workflows with Amazon EventBridge and SQS</TagListItem>
+  <TagListItem>AI support assistant using Amazon Bedrock</TagListItem>
 </TagList>
 
-<Blockquote
-  author={{ name: 'Emily Selman', role: 'Head of Engineering at Unseal' }}
-  image={{ src: imageEmilySelman }}
->
-  Studio did an amazing job building out our core blockchain infrastructure and
-  I’m sure once PlaceboCoin rallies they’ll be able to finish the project.
-</Blockquote>
+## Delivery scenario
 
-<StatList>
-  <StatListItem value="34%" label="Fewer transactions" />
-  <StatListItem value="10%" label="Slower transactions" />
-  <StatListItem value="1000ms" label="Transaction latency" />
-  <StatListItem value="3" label="Active nodes" />
-</StatList>
+We implemented a pragmatic target architecture anchored in Amazon ECS Fargate for containerized services and Lambda for bursty background workflows. Data pipelines were split between Amazon RDS for transactional integrity and DynamoDB for high-throughput event lookups. We introduced EventBridge and SQS to decouple brittle integrations and reduce failure amplification across services.
+
+On top of the new cloud foundation, MarchForth built an internal AI triage assistant with Amazon Bedrock and OpenSearch-backed retrieval for runbooks and incident history. Operations teams used it to speed up diagnosis, recommend remediation paths, and surface relevant deployment context during active incidents.
+
+The result was a stronger operating model delivered jointly with TekStream: faster release cycles, better observability, and lower cloud waste through workload right-sizing and improved deployment hygiene.

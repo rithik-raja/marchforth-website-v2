@@ -103,12 +103,12 @@ function Services() {
     <>
       <SectionIntro
         eyebrow="Services"
-        title="We help you identify, explore and respond to new opportunities."
+        title="Digital products and intelligent systems built to improve revenue, speed, and operational efficiency."
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          As long as those opportunities involve giving us money to re-purpose
-          old projects — we can come up with an endless number of those.
+          We partner with B2B SaaS teams to deliver secure, scalable software
+          from strategy through launch and ongoing optimization.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -124,23 +124,27 @@ function Services() {
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-132 lg:pl-4">
             <ListItem title="Web development">
-              We specialise in crafting beautiful, high quality marketing pages.
-              The rest of the website will be a shell that uses lorem ipsum
-              everywhere.
+              We build high-performance web platforms that improve conversion,
+              search visibility, and user experience. Delivered with Next.js
+              and React, deployed on Vercel or AWS, and measured with GA4.
             </ListItem>
-            <ListItem title="Application development">
-              We have a team of skilled developers who are experts in the latest
-              app frameworks, like Angular 1 and Google Web Toolkit.
+            <ListItem title="Cloud architecture">
+              We design and modernize cloud foundations to reduce downtime,
+              improve release velocity, and control infrastructure spend. We
+              implement AWS and Azure architectures with Terraform, Docker,
+              GitHub Actions, and Datadog.
             </ListItem>
-            <ListItem title="E-commerce">
-              We are at the forefront of modern e-commerce development. Which
-              mainly means adding your logo to the Shopify store template we’ve
-              used for the past six years.
+            <ListItem title="AI/ML">
+              We implement practical AI features like document intelligence,
+              internal copilots, and support automation to reduce manual work.
+              Solutions are built with OpenAI or Anthropic, AWS Bedrock, and
+              Pinecone or pgvector with security and governance in mind.
             </ListItem>
-            <ListItem title="Custom content management">
-              At MarchForth we understand the importance of having a robust and
-              customised CMS. That’s why we run all of our client projects out
-              of a single, enormous Joomla instance.
+            <ListItem title="Custom software development">
+              We develop custom systems and integrations that eliminate
+              repetitive workflows and improve data visibility across teams. We
+              connect platforms including Stripe, Salesforce, HubSpot, and
+              Slack with secure access via Auth0 or Okta.
             </ListItem>
           </List>
         </div>

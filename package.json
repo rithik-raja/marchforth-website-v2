@@ -21,6 +21,7 @@
     "clsx": "^2.1.1",
     "escape-string-regexp": "^5.0.0",
     "fast-glob": "^3.3.3",
+    "firebase": "^12.9.0",
     "framer-motion": "^12.23.11",
     "next": "^15.5.10",
     "react": "^19.2.4",
@@ -30,6 +31,7 @@
     "remark-gfm": "^4.0.1",
     "remark-rehype-wrap": "0.0.5",
     "shiki": "^0.11.1",
+    "sonner": "^2.0.7",
     "tailwindcss": "^4.1.15",
     "typescript": "^5.8.3",
     "unified-conditional": "0.0.2"

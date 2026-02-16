@@ -9,25 +9,25 @@ const navigation = [
   {
     title: 'Work',
     links: [
-      { title: 'FamilyFund', href: '/work/family-fund' },
-      { title: 'Unseal', href: '/work/unseal' },
-      { title: 'Phobia', href: '/work/phobia' },
-      {
-        title: (
-          <>
-            See all <span aria-hidden="true">&rarr;</span>
-          </>
-        ),
-        href: '/work',
-      },
+      { title: 'Gathr', href: '/work/gathr' },
+      { title: 'TekStream', href: '/work/tekstream' },
+      { title: 'MyTempie', href: '/work/my-tempie' },
+      // {
+      //   title: (
+      //     <>
+      //       See all <span aria-hidden="true">&rarr;</span>
+      //     </>
+      //   ),
+      //   href: '/work',
+      // },
     ],
   },
   {
     title: 'Company',
     links: [
-      { title: 'About', href: '/about' },
+      // { title: 'About', href: '/about' },
       { title: 'Process', href: '/process' },
-      { title: 'Blog', href: '/blog' },
+      // { title: 'Blog', href: '/blog' },
       { title: 'Contact us', href: '/contact' },
     ],
   },
@@ -116,9 +116,9 @@ export function Footer() {
       <FadeIn>
         <div className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
           <Navigation />
-          <div className="flex lg:justify-end">
+          {/* <div className="flex lg:justify-end">
             <NewsletterForm />
-          </div>
+          </div> */}
         </div>
         <div className="mt-24 mb-20 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
           <Link href="/" aria-label="Home">

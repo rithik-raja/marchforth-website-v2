@@ -30,7 +30,11 @@ export default async function CaseStudyLayout({
           </PageIntro>
 
           <FadeIn>
-            <div className="mt-24 border-t border-neutral-200 bg-white/50 sm:mt-32 lg:mt-40">
+            <div
+              className={`mt-24 border-t border-neutral-200 bg-white/50 sm:mt-32 lg:mt-40 ${
+                caseStudy.image ? '' : 'mb-24 sm:mb-32 lg:mb-40'
+              }`}
+            >
               <Container>
                 <div className="mx-auto max-w-5xl">
                   <dl className="-mx-6 grid grid-cols-1 text-sm text-neutral-950 sm:mx-0 sm:grid-cols-2">

@@ -1,0 +1,1 @@
+This is a Next.js + TailwindCSS template for a software consultancy website. Our goal is to customize it for my consultancy, Marchforth. We are going to replace the placeholders and existing tongue-in-cheek humor with something more relevant and serious.

@@ -9,7 +9,7 @@ import {
   useState,
 } from 'react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import clsx from 'clsx'
 import { motion, MotionConfig, useReducedMotion } from 'framer-motion'
 
@@ -124,13 +124,16 @@ function NavigationRow({ children }: { children: React.ReactNode }) {
 function NavigationItem({
   href,
   children,
+  onClick,
 }: {
   href: string
   children: React.ReactNode
+  onClick?: React.MouseEventHandler<HTMLAnchorElement>
 }) {
   return (
     <Link
       href={href}
+      onClick={onClick}
       className="group relative isolate -mx-6 bg-neutral-950 px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16"
     >
       {children}
@@ -140,16 +143,45 @@ function NavigationItem({
 }
 
 function Navigation() {
+  let router = useRouter()
+  let pathname = usePathname()
+
+  function scrollToCaseStudies() {
+    let target = document.getElementById('case-studies')
+    if (!target) return
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
+  function handleOurWorkClick(event: React.MouseEvent<HTMLAnchorElement>) {
+    event.preventDefault()
+
+    if (pathname === '/') {
+      scrollToCaseStudies()
+      return
+    }
+
+    window.sessionStorage.setItem('scroll-to-case-studies', '1')
+    router.push('/')
+  }
+
+  useEffect(() => {
+    if (pathname !== '/') return
+    if (window.sessionStorage.getItem('scroll-to-case-studies') !== '1') return
+
+    window.sessionStorage.removeItem('scroll-to-case-studies')
+    window.setTimeout(scrollToCaseStudies, 0)
+  }, [pathname])
+
   return (
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
-        <NavigationItem href="/work">Our Work</NavigationItem>
-        <NavigationItem href="/about">About Us</NavigationItem>
-      </NavigationRow>
-      <NavigationRow>
+        <NavigationItem href="/work" onClick={handleOurWorkClick}>Our Work</NavigationItem>
         <NavigationItem href="/process">Our Process</NavigationItem>
-        {/* <NavigationItem href="/blog">Blog</NavigationItem> */}
       </NavigationRow>
+      {/* <NavigationRow>
+        <NavigationItem href="/blog">Blog</NavigationItem>
+        <NavigationItem href="/about">About Us</NavigationItem>
+      </NavigationRow> */}
     </nav>
   )
 }

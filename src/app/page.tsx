@@ -60,11 +60,8 @@ function CaseStudies({
   caseStudies: Array<MDXEntry<CaseStudy>>
 }) {
   return (
-    <>
-      <SectionIntro
-        title="Case studies"
-        className="mt-24 sm:mt-32 lg:mt-40"
-      >
+    <section id="case-studies">
+      <SectionIntro title="Case studies" className="mt-24 sm:mt-32 lg:mt-40">
         <p>
           Explore how MarchForth has partnered with clients to deliver impactful and innovative software solutions.
         </p>
@@ -85,7 +82,7 @@ function CaseStudies({
                     />
                   </Link>
                 </h3>
-                
+
                 <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
                   {caseStudy.title}
                 </p>
@@ -97,7 +94,7 @@ function CaseStudies({
           ))}
         </FadeInStagger>
       </Container>
-    </>
+    </section>
   )
 }
 

@@ -32,7 +32,9 @@ export default async function CaseStudyLayout({
           <FadeIn>
             <div
               className={`mt-24 border-t border-neutral-200 bg-white/50 sm:mt-32 lg:mt-40 ${
-                caseStudy.image ? '' : 'mb-24 sm:mb-32 lg:mb-40'
+                caseStudy.image
+                  ? ''
+                  : 'mb-24 border-b border-neutral-200 sm:mb-32 lg:mb-40'
               }`}
             >
               <Container>

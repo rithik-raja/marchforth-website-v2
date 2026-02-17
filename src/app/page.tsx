@@ -27,8 +27,9 @@ function Clients() {
     <div className="mt-24 rounded-4xl bg-neutral-950 py-12 sm:mt-32 sm:py-20 lg:mt-56">
       <Container>
         <FadeIn className="flex items-center gap-x-8">
-          <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            We’ve worked with hundreds of amazing people
+          <div className="h-px flex-auto bg-neutral-800" />
+          <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white">
+            We’ve worked with tons of amazing people
           </h2>
           <div className="h-px flex-auto bg-neutral-800" />
         </FadeIn>
@@ -40,7 +41,9 @@ function Clients() {
             {clients.map(([client, logo]) => (
               <li key={client}>
                 <FadeIn>
-                  <Image src={logo} alt={client} unoptimized className="h-8 w-auto object-contain" />
+                  <div className='flex justify-center'>
+                    <Image src={logo} alt={client} unoptimized className="h-12 w-auto object-contain" />
+                  </div>
                 </FadeIn>
               </li>
             ))}
@@ -182,7 +185,7 @@ export default async function Home() {
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: 'Gathr' }}
       >
-        MarchForth's team went above and beyond in bringing Gathr to life. They truly understood our vision and delivered a solution that perfectly connects campus life and drives participation.
+        MarchForth's team went above and beyond in bringing Gathr to life. They totally understood our vision and delivered a solution that perfectly connects campus life and drives participation.
       </Testimonial>
 
       <Services />

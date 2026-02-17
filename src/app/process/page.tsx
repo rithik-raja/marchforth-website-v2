@@ -1,6 +1,5 @@
 import { type Metadata } from 'next'
 
-import { Blockquote } from '@/components/Blockquote'
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
@@ -61,22 +60,21 @@ function Discover() {
         <p>
           We work closely with our clients to understand their{' '}
           <strong className="font-semibold text-neutral-950">needs</strong> and
-          goals, embedding ourselves in their every day operations to understand
+          goals, embedding ourselves in their day-to-day operations to understand
           what makes their business tick.
         </p>
         <p>
-          Our team of private investigators shadow the company director’s for
-          several weeks while our account managers focus on going through their
-          trash. Our senior security experts then perform social engineering
-          hacks to gain access to their{' '}
-          <strong className="font-semibold text-neutral-950">business</strong>{' '}
-          accounts — handing that information over to our forensic accounting
-          team.
+          We align with product, engineering, and leadership stakeholders to map
+          constraints, identify high-impact opportunities, and define clear
+          success metrics. This gives us a shared view of the current state and
+          the desired future state of the{' '}
+          <strong className="font-semibold text-neutral-950">business</strong>.
         </p>
         <p>
           Once the full audit is complete, we report back with a comprehensive{' '}
           <strong className="font-semibold text-neutral-950">plan</strong> and,
-          more importantly, a budget.
+          a practical execution path with clear milestones, scope boundaries, and
+          budget guidance.
         </p>
       </div>
 
@@ -84,12 +82,12 @@ function Discover() {
         Included in this phase
       </h3>
       <TagList className="mt-4">
-        <TagListItem>In-depth questionnaires</TagListItem>
-        <TagListItem>Feasibility studies</TagListItem>
-        <TagListItem>Blood samples</TagListItem>
-        <TagListItem>Employee surveys</TagListItem>
-        <TagListItem>Proofs-of-concept</TagListItem>
-        <TagListItem>Forensic audit</TagListItem>
+        <TagListItem>Stakeholder interviews</TagListItem>
+        <TagListItem>Technical discovery</TagListItem>
+        <TagListItem>Architecture review</TagListItem>
+        <TagListItem>Workflow mapping</TagListItem>
+        <TagListItem>Proofs of concept</TagListItem>
+        <TagListItem>Delivery roadmap</TagListItem>
       </TagList>
     </Section>
   )
@@ -100,33 +98,22 @@ function Build() {
     <Section title="Build" image={{ src: imageLaptop, shape: 1 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          Based off of the discovery phase, we develop a comprehensive roadmap
-          for each product and start working towards delivery. The roadmap is an
-          intricately tangled mess of technical nonsense designed to drag the
-          project out as long as possible.
+          Based on the discovery phase, we define the delivery plan and begin
+          implementation in structured iterations. Each milestone is tied to
+          measurable outcomes and real business priorities.
         </p>
         <p>
-          Each client is assigned a key account manager to keep lines of
-          communication open and obscure the actual progress of the project.
-          They act as a buffer between the client’s incessant nagging and the
-          development team who are hard at work scouring open source projects
-          for code to re-purpose.
+          Every engagement has a dedicated delivery lead who keeps communication
+          direct and transparent. Product, design, and engineering stay aligned
+          through weekly checkpoints, shared backlogs, and clear decision logs.
         </p>
         <p>
-          Our account managers are trained to only reply to client emails after
-          9pm, several days after the initial email. This reinforces the general
-          aura that we are very busy and dissuades clients from asking for
-          changes.
+          We surface risks early, adapt when requirements evolve, and protect
+          scope through disciplined planning. That balance helps teams move
+          quickly without compromising quality.
         </p>
       </div>
 
-      <Blockquote
-        author={{ name: 'Debra Fiscal', role: 'CEO of Unseal' }}
-        className="mt-12"
-      >
-        MarchForth were so regular with their progress updates we almost began to
-        think they were automated!
-      </Blockquote>
     </Section>
   )
 }
@@ -136,31 +123,31 @@ function Deliver() {
     <Section title="Deliver" image={{ src: imageMeeting, shape: 2 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          About halfway through the Build phase, we push each project out by 6
-          weeks due to a change in{' '}
+          As we approach launch, we validate the solution against business and
+          technical goals, then finalize rollout plans with clear owners and
+          timelines. Any changes in{' '}
           <strong className="font-semibold text-neutral-950">
             requirements
           </strong>
-          . This allows us to increase the budget a final time before launch.
+          {' '}are assessed with impact on scope, timeline, and risk.
         </p>
         <p>
-          Despite largely using pre-built components, most of the{' '}
+          We prioritize reliability and observability before release, so teams
+          can deploy with confidence. Final-stage{' '}
           <strong className="font-semibold text-neutral-950">progress</strong>{' '}
-          on each project takes place in the final 24 hours. The development
-          time allocated to each client is actually spent making augmented
-          reality demos that go viral on social media.
+          focuses on hardening critical paths, validating data flows, and
+          preparing support runbooks.
         </p>
         <p>
-          We ensure that the main pages of the site are{' '}
+          We ensure that every business-critical workflow is{' '}
           <strong className="font-semibold text-neutral-950">
             fully functional
           </strong>{' '}
-          at launch — the auxiliary pages will, of course, be lorem ipusm shells
-          which get updated as part of our exorbitant{' '}
+          at launch, with a pragmatic post-launch plan to iterate on secondary
+          features and long-term{' '}
           <strong className="font-semibold text-neutral-950">
-            maintenance
+            maintenance.
           </strong>{' '}
-          retainer.
         </p>
       </div>
 
@@ -169,16 +156,16 @@ function Deliver() {
       </h3>
       <List className="mt-8">
         <ListItem title="Testing">
-          Our projects always have 100% test coverage, which would be impressive
-          if our tests weren’t as porous as a sieve.
+          We implement practical test coverage across critical paths, including
+          automated regression checks and release validation.
         </ListItem>
         <ListItem title="Infrastructure">
-          To ensure reliability we only use the best Digital Ocean droplets that
-          $4 a month can buy.
+          We deploy with production-ready infrastructure, right-sized for your
+          requirements and designed for reliability and scale.
         </ListItem>
         <ListItem title="Support">
-          Because we hold the API keys for every critical service your business
-          uses, you can expect a lifetime of support, and invoices, from us.
+          We provide structured handoff documentation and ongoing support options
+          so your team can operate confidently after launch.
         </ListItem>
       </List>
     </Section>
@@ -200,39 +187,36 @@ function Values() {
         title="Balancing reliability and innovation"
       >
         <p>
-          We strive to stay at the forefront of emerging trends and
-          technologies, while completely ignoring them and forking that old
-          Rails project we feel comfortable using. We stand by our core values
-          to justify that decision.
+          We combine proven engineering practices with modern tools to deliver
+          dependable systems that can evolve with your business.
         </p>
       </SectionIntro>
 
       <Container className="mt-24">
         <GridList>
           <GridListItem title="Meticulous">
-            The first part of any partnership is getting our designer to put
-            your logo in our template. The second step is getting them to do the
-            colors.
+            We start with clear requirements, precise planning, and thoughtful
+            execution details to reduce risk early.
           </GridListItem>
           <GridListItem title="Efficient">
-            We pride ourselves on never missing a deadline which is easy because
-            most of the work was done years ago.
+            We focus on high-impact work first, delivering value quickly through
+            iterative releases.
           </GridListItem>
           <GridListItem title="Adaptable">
-            Every business has unique needs and our greatest challenge is
-            shoe-horning those needs into something we already built.
+            Every organization is different, so we tailor our approach to your
+            team, constraints, and goals.
           </GridListItem>
           <GridListItem title="Honest">
-            We are transparent about all of our processes, banking on the simple
-            fact our clients never actually read anything.
+            We communicate openly about progress, tradeoffs, and risks so
+            decisions can be made with confidence.
           </GridListItem>
           <GridListItem title="Loyal">
-            We foster long-term relationships with our clients that go beyond
-            just delivering a product, allowing us to invoice them for decades.
+            We build long-term partnerships and stay invested in outcomes beyond
+            the initial launch.
           </GridListItem>
           <GridListItem title="Innovative">
-            The technological landscape is always evolving and so are we. We are
-            constantly on the lookout for new open source projects to clone.
+            We adopt new technologies deliberately, choosing what is proven and
+            appropriate for your context.
           </GridListItem>
         </GridList>
       </Container>
@@ -243,7 +227,7 @@ function Values() {
 export const metadata: Metadata = {
   title: 'Our Process',
   description:
-    'We believe in efficiency and maximizing our resources to provide the best value to our clients.',
+    'Learn how MarchForth discovers, builds, and delivers software solutions with clarity, speed, and reliability.',
 }
 
 export default function Process() {
@@ -251,9 +235,8 @@ export default function Process() {
     <RootLayout>
       <PageIntro eyebrow="Our process" title="How we work">
         <p>
-          We believe in efficiency and maximizing our resources to provide the
-          best value to our clients. The primary way we do that is by re-using
-          the same five projects we’ve been developing for the past decade.
+          We partner with teams to discover the right opportunities, build with
+          discipline, and deliver software that performs in production.
         </p>
       </PageIntro>
 

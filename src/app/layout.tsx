@@ -6,7 +6,7 @@ import { ToasterProvider } from '@/components/ToasterProvider'
 export const metadata: Metadata = {
   title: {
     template: '%s - MarchForth',
-    default: 'MarchForth - Software consultancy based in Tampa, FL',
+    default: 'MarchForth - Software consultancy based in Fort Myers, FL',
   },
 }
 
